@@ -12,3 +12,5 @@ dist
 .idea
 *.log
 npm-debug.log*
+
+ktlx-tmp/
