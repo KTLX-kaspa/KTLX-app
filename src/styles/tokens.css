@@ -1,0 +1,80 @@
+﻿:root {
+  /* Brand - logo + banner */
+  --ktlx-bg: #0b1c1d;
+  --ktlx-bg-elevated: #122829;
+  --ktlx-surface: #1b3f40;
+  --ktlx-surface-hover: #234a4b;
+  --ktlx-border: rgba(127, 211, 197, 0.18);
+  --ktlx-border-strong: rgba(0, 229, 204, 0.45);
+
+  --ktlx-accent: #00e5cc;
+  --ktlx-accent-soft: #4eb3a3;
+  --ktlx-accent-muted: #7fd3c5;
+  --ktlx-lime: #99ff00;
+
+  --ktlx-text: #ffffff;
+  --ktlx-text-muted: #9bb5b3;
+  --ktlx-danger: #ff6b7a;
+  --ktlx-success: #41f0c5;
+
+  --ktlx-radius: 14px;
+  --ktlx-radius-sm: 10px;
+  --ktlx-radius-pill: 999px;
+
+  --ktlx-sidebar-width: 280px;
+  --ktlx-font: "Segoe UI", "Avenir Next", "Nunito Sans", system-ui, sans-serif;
+  --ktlx-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+
+  color-scheme: dark;
+  font-family: var(--ktlx-font);
+  background: var(--ktlx-bg);
+  color: var(--ktlx-text);
+  line-height: 1.45;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(0, 229, 204, 0.12), transparent 55%),
+    radial-gradient(900px 500px at 100% 0%, rgba(78, 179, 163, 0.1), transparent 50%),
+    var(--ktlx-bg);
+}
+
+a {
+  color: var(--ktlx-accent-muted);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--ktlx-accent);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+::selection {
+  background: rgba(0, 229, 204, 0.35);
+}

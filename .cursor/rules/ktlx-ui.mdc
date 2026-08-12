@@ -1,0 +1,45 @@
+---
+description: KTLX UI brand, layout, copy rules, and product boundaries
+globs:
+  - src/**/*.{tsx,ts,css}
+  - README.md
+  - index.html
+alwaysApply: true
+---
+
+# KTLX UI conventions
+
+Apply these rules whenever adding or editing UI or copy in this repo.
+
+## Brand & tokens
+
+- Always use CSS variables from `src/styles/tokens.css` (`--ktlx-*`). Do not introduce purple gradients, cream paper themes, or default Inter/Roboto stacks.
+- Background atmosphere: deep teal/forest (`--ktlx-bg`, `--ktlx-surface`) with seafoam/cyan accents (`--ktlx-accent`, `--ktlx-accent-soft`).
+- Lime (`--ktlx-lime`) only for rare positive highlights, not primary CTAs.
+- Logo lockup: larger logo + `KTLX` ticker on one row, title **Kaspa Token Launches X** below, socials (Discord + X) under that, banner above nav.
+- Connect button stays top-right.
+
+## Layout
+
+- Shell: left sidebar + main column (`AppShell`). New pages render inside `<Outlet />`.
+- Prefer simple page header (`h1` + one muted sentence) then primary cards/panels.
+- Cards use `.card` / `.card-interactive` with border highlight on hover.
+- Global toasts: `useToast()` bottom-right, dismiss with X.
+- Shortened addresses/txs: always `CopyableShort` with copy control.
+
+## Copy bans (hard rule)
+
+- Never use the em dash character `—` anywhere in the project (UI, README, comments, meta). Use a hyphen `-`, period, or rephrase.
+- Never use the word `blockchain` anywhere in the project. Prefer Kaspa L1, on-chain, network, or similar.
+
+## Components
+
+- Reuse `.btn`, `.btn-primary`, `.btn-ghost`, `.card`, `.field`, `.modal` from `src/styles/app.css`.
+- Keep inputs, selects, textareas on the unified control styles.
+- Wallet: only Kasware via `useWallet` / `src/lib/kaspa/kasware.ts`.
+- Payments: use `PayPanel` / `PayModal`.
+
+## Product boundaries
+
+- No Kasparex branding, names, env keys, or cross-links.
+- Client-only: no server secrets; public `VITE_*` config only. Admin = ownership of `VITE_ADMIN_ADDRESS`.
